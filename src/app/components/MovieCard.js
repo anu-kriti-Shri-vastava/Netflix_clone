@@ -11,8 +11,8 @@ const MovieCard = (curElem) => {
             <Image src={curElem.jawSummary.backgroundImage.url} alt={title} width={250} height={200} />
         </div>
         <div className={styles.card_data}>
-            <h2>{title}</h2>
-            <p>{synopsis}</p>
+            <h2>{title.substring(0,18)}</h2>
+            <p>{`${synopsis.substring(0,66)}...`}</p>
             <Link href={`/movie/${id}`}>
                 <button>
                     Read More
